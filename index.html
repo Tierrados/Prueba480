@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de notas</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="container">
+    <h1>Gestión de Notas</h1>
+    <h3>Introduce los datos del alumno</h3>
+
+    <!-- Formulario donde obtengo los datos 1.-->
+    <form id="formulario">
+        <div class="dato-formulario">
+            <label for="nombre">Nombre:</label>
+            <input type="text" placeholder="Ej: Pedro" id="nombre" required>
+        </div>
+        <div class="dato-formulario">
+            <label for="apellido">Apellidos:</label>
+            <input type="text" placeholder="Ej: Segarra Molina" id="apellido" required>
+        </div>
+        <div class="dato-formulario">
+            <label for="nota">Nota:</label>
+            <input type="number" placeholder="Ej: 7.65" id="nota" step="0.01" min="0" max="10" required>
+        </div>
+        <button type="submit">Agregar Nota</button>
+    </form>
+    </div>
+
+<div class="container">
+    <!-- Cálculo del promedio de las notas 2.-->
+    <div id="promedio">
+        <h2>Promedio: </h2>
+        <h3><span id="promedio-notas">0</span> </h3>
+    </div>
+
+    <!-- Lista de los estudiantes 3.-->
+    <div id="lista-estudiantes">
+        <h2>Estudiantes</h2>
+        <ul id="estudiantes"></ul>
+    </div>
+</div>
+
+<script src="controlador.js"></script>
+</body>
+</html>

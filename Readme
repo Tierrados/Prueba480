@@ -1,0 +1,35 @@
+Lenguajes utilizado:
+HTML
+CSS
+JavaScript
+
+
+El sistema se compone de tres ficheros:
+- La pagina web.
+- La pagina de estilos (styles.css).
+- El fichero javascript que realiza el resto de tareas (controlador.js).
+
+La estructura de la pagina principal está dividida en dos partes
+separadas en un div con clase container por cada parte.
+
+En el primer div se ha hecho el formulario para dar los datos
+al controlador (1.), mientras que en el segundo div se devuelve
+el promedio de las notas de los estudiantes (2.) y también se
+ha creado una lista (3.) que se encarga de actualizar el controlador.
+
+En el controlador, al principio obtendremos todos los elementos que se
+puedan utilizar de la pagina de index. Lo siguiente que se observa es
+un event listener (1.) que se ha creado para sustituir a la función por defecto
+del botón submit. En este se obtienen todos los campos del formulario para
+trabajar con ellos, se llama a las funciones y se reinicia el formulario.
+La función actualizarLista (2.) crea una lista de estudiantes valiéndose de los
+innerHTML que nos permitirán modificar el fichero index, se creará la cadena
+y el botón de eliminar estudiante.
+window.eliminarEstudiante (3.) eliminará de la lista una fila y actualizará la vista.
+La función actualizaPromedio (4.) hará la suma de todos los elementos y los
+mostrará en el span que hay en index.
+
+Autor:
+Raúl Igual
+
+
