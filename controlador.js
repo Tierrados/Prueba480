@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const formulario = document.getElementById('formulario');
     const listaEstudiantes = document.getElementById('estudiantes');
     const promedio = document.getElementById('promedio-notas');
-    const estudiantes= [];
+    const estudiantes = [];
 //1.
     formulario.addEventListener('submit', (e) => {
 
@@ -10,11 +10,12 @@ document.addEventListener('DOMContentLoaded', () => {
         const nombre = document.getElementById('nombre').value.trim();
         const apellido = document.getElementById('apellido').value.trim();
         const nota = parseFloat(document.getElementById('nota').value.trim());
-        estudiantes.push({ nombre, apellido, nota });
+        estudiantes.push({nombre, apellido, nota});
         actualizarLista();
 
         formulario.reset();
     });
+
 //2.
     function actualizarLista() {
 
@@ -29,12 +30,14 @@ document.addEventListener('DOMContentLoaded', () => {
             actualizarPromedio();
         });
     }
+
 //3.
     window.eliminarEstudiante = (index) => {
 
         estudiantes.splice(index, 1);
         actualizarLista();
     };
+
 //4.
     function actualizarPromedio() {
         const total = estudiantes.reduce((sum, estudiante) => sum + estudiante.nota, 0);
